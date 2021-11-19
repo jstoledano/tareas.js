@@ -1,0 +1,28 @@
+{
+  "name": "tareas",
+  "version": "0.1.0",
+  "description": "Gestión de tareas en la consola",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jstoledano/task.js.git"
+  },
+  "keywords": [
+    "tareas",
+    "gtd",
+    "javascript",
+    "node"
+  ],
+  "author": "Javier Sanchez Toledano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jstoledano/task.js/issues"
+  },
+  "homepage": "https://github.com/jstoledano/task.js#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
