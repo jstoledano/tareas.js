@@ -25,7 +25,8 @@
   "homepage": "https://github.com/jstoledano/task.js#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "jshint": "^2.13.1"
