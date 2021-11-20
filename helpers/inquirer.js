@@ -7,20 +7,20 @@ const preguntas = [
         name: 'opcion',
         message: '¿Qué desea hacer?',
         choices: [
-            {value: '1', name: '1. Crear tarea'},
-            {value: '2', name: '2. Listar tareas'},
-            {value: '3', name: '3. Listar tareas completadas'},
-            {value: '4', name: '4. Listar tareas pendientes'},
-            {value: '5', name: '5. Completar tarea'},
-            {value: '6', name: '6. Borrar tarea'},
-            {value: '0', name: '0. Salir'}
+            {value: '1', name: `${'1.'.green} Crear tarea`},
+            {value: '2', name: `${'2.'.green} Listar tareas`},
+            {value: '3', name: `${'3.'.green} Listar tareas completadas`},
+            {value: '4', name: `${'4.'.green} Listar tareas pendientes`},
+            {value: '5', name: `${'5.'.green} Completar tarea`},
+            {value: '6', name: `${'6.'.green} Borrar tarea`},
+            {value: '0', name: `${'0.'.green} Salir`}
         ]
     }
 ];
 
 const inquirerMenu = async () => {
     console.log('========================='.green);
-    console.log('  Seleccione una opción'.red);
+    console.log('  Seleccione una opción'.bold.white);
     console.log('========================='.green);
 
     const {opcion} = await inquirer.prompt(preguntas);
@@ -29,7 +29,7 @@ const inquirerMenu = async () => {
 };
 
 const pausa = async () => {
-    const question = {
+    const pregunta = {
         input: process.stdin,
         output: process.stdout,
         name: 'enter',
@@ -37,11 +37,11 @@ const pausa = async () => {
     };
 
     console.log(`\n`);
-    await inquirer.prompt(question);
+    await inquirer.prompt(pregunta);
 };
 
-const question = async(message) => {
-    const question = {
+const leerInput = async(message) => {
+    const pregunta = {
         type: 'input',
         message,
         name: 'desc',
@@ -54,7 +54,7 @@ const question = async(message) => {
         }
     };
 
-    const {desc} = await inquirer.prompt(question);
+    const {desc} = await inquirer.prompt(pregunta);
 
     return desc;
 };
@@ -62,5 +62,6 @@ const question = async(message) => {
 module.exports = {
     inquirerMenu,
     pausa,
-    question
+    leerInput
 };
+
