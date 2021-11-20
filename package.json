@@ -4,6 +4,7 @@
   "description": "Gestión de tareas en la consola",
   "main": "app.js",
   "scripts": {
+    "run": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,7 +24,8 @@
   },
   "homepage": "https://github.com/jstoledano/task.js#readme",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.0"
   },
   "devDependencies": {
     "jshint": "^2.13.1"
