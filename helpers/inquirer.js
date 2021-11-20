@@ -28,7 +28,19 @@ const inquirerMenu = async () => {
     return opcion;
 };
 
+const pausa = async () => {
+    const question = {
+        input: process.stdin,
+        output: process.stdout,
+        name: 'enter',
+        message: `Presione ${'ENTER'.red} para continuar\n`
+    };
+
+    console.log(`\n`);
+    await inquirer.prompt(question);
+};
 
 module.exports = {
-    inquirerMenu
+    inquirerMenu,
+    pausa
 };
