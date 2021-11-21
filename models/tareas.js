@@ -36,7 +36,7 @@ class Tareas {
         listado.forEach((tarea, i) => {
             const idx = `${i + 1}.`.green;
             const {desc, completadoEn} = tarea;
-            const done = completadoEn ? 'Completada'.green : 'Pendiente'.red;
+            const done = completadoEn ? `${tarea.completadoEn}`.green : 'Pendiente'.red;
             console.log(`${idx} ${desc} :: ${done}`);
         });
     }
@@ -55,6 +55,21 @@ class Tareas {
         this._imprimirListado(listado);
         return listado;
     }
+
+    toggleCompletadas(ids = []) {
+        ids.forEach(id => {
+            const tarea = this._listado[id];
+            if (!tarea.completadoEn) {
+                tarea.completadoEn = new Date().toISOString();
+            }
+        });
+        this.listadoArr.forEach(tarea => {
+            if(!ids.includes(tarea.id)) {
+                this._listado[tarea.id].completadoEn = null;
+            }
+        });
+    }
+    
 }
 
 
