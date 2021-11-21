@@ -5,6 +5,12 @@ class Tareas {
         this._listado = {};
     }
 
+    borrarTarea(id='') {
+        if (this._listado[id]) {
+            delete this._listado[id];
+        }
+    }
+
     get listadoArr() {
         const listado = [];
         Object.keys(this._listado).forEach(k => {
